@@ -1,0 +1,44 @@
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option channel '11'
+	option macaddr 'c0:4a:00:af:50:69'
+	option hwmode '11ng'
+	option htmode 'HT20'
+	list ht_capab 'LDPC'
+	list ht_capab 'SHORT-GI-20'
+	list ht_capab 'SHORT-GI-40'
+	list ht_capab 'TX-STBC'
+	list ht_capab 'RX-STBC1'
+	list ht_capab 'DSSS_CCK-40'
+	option country 'US'
+	option txpower '27'
+
+config wifi-iface
+	option device 'radio0'
+	option network 'wireless'
+	option mode 'adhoc'
+	option ssid 'OpenWrt'
+	option encryption 'none'
+
+config wifi-device 'radio1'
+	option type 'mac80211'
+	option channel '36'
+	option macaddr 'c0:4a:00:af:50:6a'
+	option hwmode '11na'
+	option htmode 'HT20'
+	list ht_capab 'LDPC'
+	list ht_capab 'SHORT-GI-20'
+	list ht_capab 'SHORT-GI-40'
+	list ht_capab 'TX-STBC'
+	list ht_capab 'RX-STBC1'
+	list ht_capab 'DSSS_CCK-40'
+	option country 'US'
+	option txpower '0'
+
+config wifi-iface
+	option device 'radio1'
+	option ssid 'OpenWrt'
+	option encryption 'none'
+	option mode 'adhoc'
+	option network 'wireless2'

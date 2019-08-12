@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!--C:\Users\said\Documents\NetBeansProjects\WimishMonitor\XmlFiles\nodesList.xml-->
+<MeshNetwork>
+   <!-- <Node name="Router3">
+        <RouterID> R3_GF </RouterID>   
+        <IP>192.168.2.3</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    -->
+    <Node name="Router1">
+        <RouterID> R1_GF </RouterID>   
+        <IP>192.168.2.1</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router2">
+        <RouterID> R2_GF </RouterID>   
+        <IP>192.168.2.2</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router3">
+        <RouterID> R3_GF </RouterID>   
+        <IP>192.168.2.3</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router4">
+        <RouterID> R4_GF </RouterID>   
+        <IP>192.168.2.4</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router5">
+        <RouterID> R5_GF </RouterID>   
+        <IP>192.168.2.5</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router6">
+        <RouterID> R6_GF </RouterID>   
+        <IP>192.168.2.6</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router7">
+        <RouterID> R7_GF </RouterID>   
+        <IP>192.168.2.7</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router8">
+        <RouterID> R8_GF </RouterID>   
+        <IP>192.168.2.8</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router9">
+        <RouterID> R9_GF </RouterID>   
+        <IP>192.168.2.9</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+    <Node name="Router10">
+        <RouterID> R10_GF </RouterID>   
+        <IP>192.168.2.10</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>     
+    <Node name="Router11">
+        <RouterID> R11_GF </RouterID>   
+        <IP>192.168.2.11</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>     <Node name="Router12">
+        <RouterID> R12_GF </RouterID>   
+        <IP>192.168.2.12</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>     
+    <Node name="Router13">
+        <RouterID> R13_GF </RouterID>   
+        <IP>192.168.2.13</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node> 
+    <Node name="Router14">
+        <RouterID> R14_GF </RouterID>   
+        <IP>192.168.2.14</IP>
+        <MASK>255.255.255.0</MASK>
+    </Node>    
+</MeshNetwork>
+ 
