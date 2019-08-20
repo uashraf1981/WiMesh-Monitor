@@ -30,27 +30,5 @@ public class Logging {
             Logging.RoutersFreeMemory.put(IP,FreeMemory);
        // }
     }
-//    public void openStreamForrouter(int i,JTextArea jta){
-//               PipedOutputStream out = null;
-//                try {
-//                    //RouterInfo obj = new RouterInfo();
-////            if(!ProcessInfo.isChecked){
-////                //LogsTextArea
-////            }
-//                    Channel.channelShell[i].setOutputStream(new TextAreaOutputStream(jta));
-//                    global.CONSTANTS.pin[i].write(("dmesg\n").getBytes());
-//                  //  global.InterfaceFactory.getProcessinterface().showProcessInfo(ProcessingTable);
-//                     isClicked = true;
-//                } catch (IOException ex) {
-//                    Logger.getLogger(WiMeshMainForm.class.getName()).log(Level.SEVERE, null, ex);
-//                } finally {
-//                    try {
-//                        out.close();
-//                    } catch (IOException ex) {
-//                        Logger.getLogger(WiMeshMainForm.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
-//                }
-//               
-//    }
-    
+
 }
