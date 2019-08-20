@@ -1,6 +1,17 @@
 # WiMesh-Monitor
-# This software is being released under the terms of the GNU General Public License.
+This software is being released under the terms of the GNU General Public License.
 
+Basics
+------
+Due to my significant involvement in wireless and IoT related experimental work on real network testbeds, I needed a tool which could allow for the following:
+
+  - A monitoring tool with a user-friendly GUI indicating the status and statistics of all nodes in a wireless network
+  - A tool which allowed for remotely controlling, configuring, rebooting the nodes
+  - Extensive logging of information at nodes (traffic, channel, queue, kernel logs, running processes) 
+
+For this particular project, we designed and deployed a 43-node indoor network made up of hacked TP-Link WDR4300 dual-band MIMO routers by replacing its firmware with OpenWRT embedded Linux to allow for fine-tuned control. Moreover, I had designed a new failure-resistant routing metric which could provide connectivity even if an attack or natural disaster brought down some nodes. The resilience and performance of the proposed ELP metric was far superior to the existing state-of-the-art metrics. The metric was impleneted in the AODV protocol on OpenWRT for these routers. The biggest problem in managing this 22-node network was to remotely control and log the traffic information passing through the network. I took it upon me to design this tool which could provide all these functionality. I ended up putting a lot more functionality than was initially envisioned - basically a comprehensive tool which could make life easy for researchers looking to remotely configure and control their testbeds.
+
+I was unable to find a tool suitable for my unique cirumstances, 
 A custom designed remote configuration, logging and monitoring tool for Wireless Networks
 
 ![stack Overflow](https://github.com/uashraf1981/WiMesh-Controller/blob/master/WiMesh%20Controller%20Flow.png)
@@ -56,7 +67,7 @@ This class handles all aspects of remote file upload/download to/from the contro
 
 Backup.java
 ---------
-This class handles the backup functionality of the software. It allows the control station to take the live snapshot of all the files, configurations and the OS flashed onto the router. We can specify a single router or select all the routers at once. The snapshot images are compressed and saved along with the date time stamps for reference. The same images can later be used through the software to setup a particular image onto the router. The select all option is like a snapshot of the entire network and our tool later allows to restore the whole network.
+This class handles the backup functionality of the software. It allows the control station to take the live snapshot of all the files, configurations and the firmware (.bin ) flashed onto the router. We can specify a single router or select all the routers at once. The snapshot images are compressed and saved along with the date time stamps for reference. The same images can later be used through the software to setup a particular image onto the router. The select all option is like a snapshot of the entire network and our tool later allows to restore the whole network.
 
 Logging.java
 ------------
