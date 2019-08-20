@@ -18,7 +18,6 @@ The flow of the tool is shown in the figure below:
 Functionality:
 --------------
 • Listing the current nodes status (up, down, restarting)
-
 • Live statistics of routes, network interfaces, channels, traffic, node uptime, received packets, transmitted packets
 
 • Information on all the running processes on a node
