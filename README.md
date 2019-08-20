@@ -22,6 +22,7 @@ Functionality:
 - Ifconfig
 - Wireless Radio Channel
 - Wireless Radio Mask
+- Take snapshot backup of a selected or all routers (OS, configuration files etc.)
 
 
 Description of the core functionalit of main files in WiMesh Monitor
@@ -37,13 +38,25 @@ Boot.java
    Wired NICs) according to the information contained in the WiMesh.info file
 5. Reboot the routers
 6. Re-open SSH connections to the Routers. If some are not responding show their identities
-7. Check that the Router ID, IP and Mask currently assigned to the router matches the info in their WiMesh.info file. 
+7. Re-check that the Router ID, IP and Mask currently assigned to the router matches the info in their WiMesh.info file. 
 8. Check if Router RAM/ROM memory nearly full (90%), issue warning for the nodes that have
 9. Show System OK message!
 
 XMLParser.java
 --------------
 Parses the MasterList.xml file and retrieves the router ID, IP Addresses, Masks and other relevant details.
+
+MeshCommunicationUnit.java
+--------------------------
+This important class makes extensive use of the JSch (Java Shell) API to create shell sessions for each router that was specified in the xml file. It connects on ports 22 of the routers (rem. that SSH has been enabled and the daemon is running beause of the boot file that we used earlier). For the shell sessions, the appropriate usernames and passwrds are incporporated automatically. The class also handles graceful termination of the shell sessions.
+
+File.java
+---------
+This class handles all aspects of remote file upload/download to/from the control station and the routers using the secure SFTP protocol and contains the appropriate code for it. Separate sessions (sockets) are generated for the file transfer which are later gracefully terminated once the file transfer is complete. The class provides a nice GUI file locater.
+
+Backup.java
+---------
+This class handles all aspects of remote file upload/download to/from the control station and the routers using the secure SFTP protocol and contains the appropriate code for it. Separate sessions (sockets) are generated for the file transfer which are later gracefully terminated once the file transfer is complete. The class provides a nice GUI file locater.
 
 Classes Defining the Data Structures
 ------------------------------------
