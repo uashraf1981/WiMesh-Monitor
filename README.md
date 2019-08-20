@@ -25,7 +25,7 @@ Functionality:
 - Take snapshot backup of a selected or all routers (OS, configuration files etc.)
 
 
-Description of the core functionalit of main files in WiMesh Monitor
+Description of the core functionality of main files in WiMesh Monitor
 --------------------------------------------------------------------
 Boot.java
 ---------
@@ -56,7 +56,19 @@ This class handles all aspects of remote file upload/download to/from the contro
 
 Backup.java
 ---------
-This class handles all aspects of remote file upload/download to/from the control station and the routers using the secure SFTP protocol and contains the appropriate code for it. Separate sessions (sockets) are generated for the file transfer which are later gracefully terminated once the file transfer is complete. The class provides a nice GUI file locater.
+This class handles the backup functionality of the software. It allows the control station to take the live snapshot of all the files, configurations and the OS flashed onto the router. We can specify a single router or select all the routers at once. The snapshot images are compressed and saved along with the date time stamps for reference. The same images can later be used through the software to setup a particular image onto the router. The select all option is like a snapshot of the entire network and our tool later allows to restore the whole network.
+
+Logging.java
+------------
+This class handles the pre-amble for logging.
+
+ProcessInfo.java
+----------------
+This class collects the details of all the processes running on the target router and displays it. The class also allows for remotely killing a particular process running on the router through the PID.
+
+RouterInfo.java
+----------------
+This class handles all sort of data colletion from the router. It collecs information about the network configuration, including the wireless and ethernet interfaces, as well as other key router statistics including interface IPs, router uptimne, traffic statistics, node status, along with several different kinds of logging worthy data. 
 
 Classes Defining the Data Structures
 ------------------------------------
