@@ -27,21 +27,7 @@ public class Parser {
        System.out.println("**************************");
       //08:56:06 up 12 days, 23:23, 8 users, load average: 0.00, 0.01, 0.05 Tue Mar 11 08:56:06 UTC 2014
        String[] ArrayDb = EliminateSpaces.split("end");
-       // Elemintae UPTIME
-//       String[] RouterResponce = new String[]{"uptimedb","RoutingDb","ProcessesDb","freememDb","ConfigDb","ifConfigDb"};
-//        Hashtable<String, String[]> ArrayList = new Hashtable<String, String[]>();
-//        int whichOne = 0;
-//       for(int i=0;i<ArrayDb.length;i++){
-//           if(i ==0){
-//               if(ArrayDb[i].startsWith(";")){
-//                   continue;
-//               }
-//               else{
-//                   ArrayList.put(RouterResponce[whichOne], ArrayDb[i]);
-//                   whichOne++;
-//               }
-//           }
-//       }
+       
        
         String[] uptimedb = ArrayDb[0].split(",");
         String[] RoutingDb = ArrayDb[1].split("\n");
