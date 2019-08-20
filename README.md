@@ -17,18 +17,17 @@ The flow of the tool is shown in the figure below:
 
 Functionality:
 --------------
-• Listing the current nodes status (up, down, restarting)
-• Live statistics of routes, network interfaces, channels, traffic, node uptime, received packets, transmitted packets
-
-• Information on all the running processes on a node
-• Logging and the ability to view those logs including kernel logs, free memory router ID, router IP, received packets, 
+- Listing the current nodes status (up, down, restarting)
+- Live statistics of routes, network interfaces, channels, traffic, node uptime, received packets, transmitted packets
+- Information on all the running processes on a node
+- Logging and the ability to view those logs including kernel logs, free memory router ID, router IP, received packets, 
   transmitted packets, lost packets, interface ID, interface IP, and transmission queue length
-• Files and folders upload and download
-• Backup of the current state of all the network routers
-• Network restore to a previous state
-• Single screen remote shell access for fine-tuned control
-• Remote editing of the files on any router
-• Remote control od nodes including reboot, modification of the radio interfaces of any router
+- Files and folders upload and download
+- Backup of the current state of all the network routers
+- Network restore to a previous state
+- Single screen remote shell access for fine-tuned control
+- Remote editing of the files on any router
+- Remote control od nodes including reboot, modification of the radio interfaces of any router
 - Take snapshot backup of a selected or all routers (OS, configuration files etc.)
 
 Some snapshots of the interface of the tool are shown below:
