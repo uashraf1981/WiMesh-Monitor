@@ -9,35 +9,30 @@ Due to my significant involvement in wireless and IoT related experimental work 
   - A tool which allowed for remotely controlling, configuring, rebooting the nodes
   - Extensive logging of information at nodes (traffic, channel, queue, kernel logs, running processes) 
 
-For this particular project, we designed and deployed a 22-node indoor network made up of hacked TP-Link WDR4300 dual-band MIMO routers by replacing its firmware with OpenWRT embedded Linux to allow for fine-tuned control. Moreover, I had designed a new failure-resistant routing metric which could provide connectivity even if an attack or natural disaster brought down some nodes. The resilience and performance of the proposed ELP metric was far superior to the existing state-of-the-art metrics. The metric was impleneted in the AODV protocol on OpenWRT for these routers. The biggest problem in managing this 22-node network was to remotely control and log the traffic information passing through the network. I took it upon me to design this tool which could provide all these functionality. I ended up putting a lot more functionality than was initially envisioned - basically a comprehensive tool which could make life easy for researchers looking to remotely configure and control their testbeds.
+For this particular project, we designed and deployed a 22-node indoor network made up of hacked TP-Link WDR4300 dual-band MIMO routers by replacing its firmware with OpenWRT embedded Linux to allow for fine-tuned control. Moreover, I had designed a new failure-resistant routing metric which could provide connectivity even if an attack or natural disaster brought down some nodes. The resilience and performance of the proposed ELP metric was far superior to the existing state-of-the-art metrics. The metric was impleneted in the AODV protocol on OpenWRT for these routers. The biggest problem in managing this 22-node network was to remotely control and log the traffic information passing through the network. I took it upon me to design this tool which could provide all these functionality. I ended up putting a lot more functionality than was initially envisioned - basically a comprehensive tool which could make life easy for researchers looking to remotely configure and control their testbeds. The figure below shows a few nodes (out of 22) deployed on the first floor:
+![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/First_floor.jpg)
 
-
-
-I was unable to find a tool suitable for my unique cirumstances, 
-A custom designed remote configuration, logging and monitoring tool for Wireless Networks
-
-![stack Overflow](https://github.com/uashraf1981/WiMesh-Controller/blob/master/WiMesh%20Controller%20Flow.png)
+The flow of the tool is shown in the figure below:
 ![stack Overflow](https://github.com/uashraf1981/WiMesh-Controller/blob/master/WiMesh%20Controller%20Flow.png)
 
 Functionality:
 --------------
-- Kernel Logs
-- Process Info
-- Traffic Statistics (RxPacket, TxPackets)
-- Node Up Time
-- Connected Users
-- Routing Table
-- IP
-- Reboot
-- Kill Process
-- Free Memory
-- Date
-- Wireless Configuration
-- Ifconfig
-- Wireless Radio Channel
-- Wireless Radio Mask
+• Listing the current nodes status (up, down, restarting)
+• Live statistics of routes, network interfaces, channels, traffic, node uptime, received packets, transmitted packets
+• Information on all the running processes on a node
+• Logging and the ability to view those logs including kernel logs, free memory router ID, router IP, received packets, 
+  transmitted packets, lost packets, interface ID, interface IP, and transmission queue length
+• Files and folders upload and download
+• Backup of the current state of all the network routers
+• Network restore to a previous state
+• Single screen remote shell access for fine-tuned control
+• Remote editing of the files on any router
+• Remote control od nodes including reboot, modification of the radio interfaces of any router
 - Take snapshot backup of a selected or all routers (OS, configuration files etc.)
 
+Some snapshots of the interface of the tool are shown below:
+![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/WiMesh_Controller_a.jpg)
+![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/WiMesh_Controller_b.jpg)
 
 Description of the core functionality of main files in WiMesh Monitor
 --------------------------------------------------------------------
