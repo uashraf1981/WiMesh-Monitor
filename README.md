@@ -1,5 +1,6 @@
 # WiMesh-Monitor
 This software is being released under the terms of the GNU General Public License.
+3000 lines of code, 30 source files excluding resources.
 
 Basics
 ------
