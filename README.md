@@ -32,6 +32,9 @@ Functionality:
 Some snapshots of the interface of the tool are shown below:
 ![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/WiMesh_Controller_a.jpg)
 ![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/WiMesh_Controller_b.jpg)
+![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/Logging.jpg)
+![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/processinfo.jpg)
+![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/remoteshell.jpg)
 
 Description of the core functionality of main files in WiMesh Monitor
 --------------------------------------------------------------------
