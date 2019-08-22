@@ -26,7 +26,7 @@ Functionality:
 - Network restore to a previous state
 - Single screen remote shell access for fine-tuned control
 - Remote editing of the files on any router
-- Remote control od nodes including reboot, modification of the radio interfaces of any router
+- Remote control of nodes including reboot, modification of the radio interfaces of any router
 - Take snapshot backup of a selected or all routers (OS, configuration files etc.)
 
 Some snapshots of the interface of the tool are shown below:
