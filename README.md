@@ -3,13 +3,15 @@ This software is being released under the terms of the GNU General Public Licens
 
 Basics
 ------
-Due to my significant involvement in wireless and IoT related experimental work on real network testbeds, I needed a tool which could allow for the following:
+The WiMesh-Monitor open source tool was designed to be able to serve as a basic security monitoring tool for networks based on embedded devices running OpenWRT Linux. It spans over 3000 lines of code in Java and Shell Scripts for Linux. It performs the following functions:
 
-  - A monitoring tool with a user-friendly GUI indicating the status and statistics of all nodes in a wireless network
-  - A tool which allowed for remotely controlling, configuring, rebooting the nodes
-  - Extensive logging of information at nodes (traffic, channel, queue, kernel logs, running processes) 
+1. Communication - Allows a central server to open parallel TCP connection to all end points through specific ports
+2. Data Collection - Extensive collection, aggregation and logging of end point data into a central repository
+3. Breach Containment - Remotely terminating malicious processes, or the complete end point device
 
-For this particular project, we designed and deployed a 22-node indoor network made up of hacked TP-Link WDR4300 dual-band MIMO routers by replacing its firmware with OpenWRT embedded Linux to allow for fine-tuned control. Moreover, I had designed a new failure-resistant routing metric which could provide connectivity even if an attack or natural disaster brought down some nodes. The resilience and performance of the proposed ELP metric was far superior to the existing state-of-the-art metrics. The metric was impleneted in the AODV protocol on OpenWRT for these routers. The biggest problem in managing this 22-node network was to remotely control and log the traffic information passing through the network. I took it upon me to design this tool which could provide all these functionality. I ended up putting a lot more functionality than was initially envisioned - basically a comprehensive tool which could make life easy for professionals and researchers looking to remotely configure and control their testbeds. 
+WiMesh-Monitor allows for a central server to remotely open ports to the network devices and subsequently collect extensive amounts of data from the end points including traffic, queue lengths, kernel logs, running processes, memory state and several other metrics. The central server acts as a central repository where all of this data is collected and can later be analyzed. It is a user-friendly and plug-and-play kind of a tool where you just need to update the XML file which is loaded at boot time to map to your own network. The extensive data collection can help in monitoring network performance, detecting anomalies etc. Another added advantage is that we can remotely monitor and terminate suspicious or malicious processes or contain a breach by instantly turning off specific end points remotely.
+
+The WiMesh-Monitor tool was initially used on a 22-node indoor network made up of hacked TP-Link WDR4300 dual-band MIMO routers by replacing its firmware with OpenWRT embedded Linux to allow for fine-tuned control. 
 
 The project has around 30 source files and 3000 lines of code (GUI and resources excluded).
 
@@ -18,18 +20,13 @@ The flow of the tool is shown in the figure below:
 
 Functionality:
 --------------
-- Listing the current nodes status (up, down, restarting)
-- Live statistics of routes, network interfaces, channels, traffic, node uptime, received packets, transmitted packets
-- Information on all the running processes on a node
-- Logging and the ability to view those logs including kernel logs, free memory router ID, router IP, received packets, 
-  transmitted packets, lost packets, interface ID, interface IP, and transmission queue length
-- Files and folders upload and download
-- Backup of the current state of all the network routers
-- Network restore to a previous state
-- Single screen remote shell access for fine-tuned control
-- Remote editing of the files on any router
-- Remote control of nodes including reboot, modification of the radio interfaces of any router
-- Take snapshot backup of a selected or all routers (OS, configuration files etc.)
+- Listing the status of all end points (up, down, restarting)
+- Log data collection from end points including kernel logs, processes in memory, traffic statistics, free memory, IP, files
+- Snapshot of the entire network i.e. all end points including their OS, configuration files, memory map
+- Network restoration to a previous state
+- Single window remote shell access to all end points
+- Remotely edit files on all end points
+- Remotely enable or disable network interfaces, terminate suspicious processes, or shut down the end point 
 
 Some snapshots of the interface of the tool are shown below:
 ![stack Overflow](https://github.com/uashraf1981/WiMesh-Monitor/blob/master/src/res/WiMesh_Controller_a.jpg)
