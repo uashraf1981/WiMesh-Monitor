@@ -3,7 +3,7 @@ This software is being released under the terms of the GNU General Public Licens
 
 Basics
 ------
-The WiMesh-Monitor open source tool was designed to be able to serve as a basic security monitoring tool for networks based on embedded devices running OpenWRT Linux. It spans over 3000 lines of code in Java and Shell Scripts for Linux. It performs the following functions:
+The WiMesh-Monitor is an open source security monitoring and looging tool that has been designed to enable comprehensive data collection (kernel logs, process logs, process info, traffic statistics) from end devices in a network. I (Usman Ashrqaf) implemented it using Java and Bash Shell Scripts  and the code spans roughly 3K lines of code. It performs the following functions:
 
 1. Communication - Allows a central server to open parallel TCP connection to all end points through specific ports
 2. Data Collection - Extensive collection, aggregation and logging of end point data into a central repository
