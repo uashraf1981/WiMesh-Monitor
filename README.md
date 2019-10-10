@@ -1,15 +1,15 @@
 # WiMesh-Monitor
-This software is being released under the terms of the GNU General Public License by Usman Ashraf, June 2017.
+This software is being released under the terms of the GNU General Public License by Usman Ashraf, June 2015.
 
 Basics
 ------
-The WiMesh-Monitor is an open source security monitoring and logging tool that has been designed to enable comprehensive data collection (kernel logs, process logs, process info, traffic statistics) from end devices in a network. I implemented it using Java and Bash Shell Scripts  and the code spans roughly 3K lines of code. It performs the following functions:
+The WiMesh-Monitor is similar to Ansible in functioning and is an open source tool for automating the remote configuration, monitoring, and management of end devices in a network. It follows the same push-based approach of Ansible and leverages the SSH daemon running on remote systems to push the configuration settings, commands, and perform remote monitoring. The similarity to Ansible is that not only is WiMesh-Monitor also push-based, but it also allows for simultaneously pushing configurations, taking backups, restoring network state and issuing commands to all the end points. In addition, it also allows for monitoring the current status of the end points by allowing for comprehensive data collection (kernel logs, process logs, process info, traffic statistics) from end devices and presenting at a centralized location. I implemented it using Java and Bash Shell Scripts  and the code spans roughly 3K lines of code. It performs the following functions:
 
 1. Communication - Allows a central server to open parallel TCP connection to all end points through specific ports
-2. Data Collection - Extensive collection, aggregation and logging of end point data into a central repository
-3. Breach Containment - Remotely terminating malicious processes, or the complete end point device
-
-WiMesh-Monitor allows for a central server to remotely open ports to the network devices and subsequently collect extensive amounts of data from the end points including traffic, queue lengths, kernel logs, running processes, memory state and several other metrics. The central server acts as a central repository where all of this data is collected and can later be analyzed. It is a user-friendly and plug-and-play kind of a tool where you just need to update the XML file which is loaded at boot time to map to your own network. The extensive data collection can help in monitoring network performance, detecting anomalies etc. Another added advantage is that we can remotely monitor and terminate suspicious or malicious processes or contain a breach by instantly turning off specific end points remotely.
+2. Configuration - Allows for obtaining the current configuration settings (network, wireless and boot settings) as well as  
+                   pushing the new configuration settings and even issuing remote command simultaneously to all end points
+3. Data Collection - Extensive collection, aggregation and logging of end point data into a central repository
+4. Breach Containment - Remotely terminating malicious processes, or the complete end point device
 
 The WiMesh-Monitor tool was initially used on a 22-node indoor network made up of hacked TP-Link WDR4300 dual-band MIMO routers by replacing its firmware with OpenWRT embedded Linux to allow for fine-tuned control. 
 
