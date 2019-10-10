@@ -5,7 +5,7 @@ Basics
 ------
 The WiMesh-Monitor is similar to Ansible in functioning and is an open source tool for automating the remote configuration, monitoring, and management of end devices in a network. It follows the same push-based approach of Ansible and leverages the SSH daemon running on remote systems to push the configuration settings, commands, and perform remote monitoring. The similarity to Ansible is that not only is WiMesh-Monitor also push-based, but it also allows for simultaneously pushing configurations, taking backups, restoring network state and issuing commands to all the end points. In addition, it also allows for monitoring the current status of the end points by allowing for comprehensive data collection (kernel logs, process logs, process info, traffic statistics) from end devices and presenting at a centralized location. I implemented it using Java and Bash Shell Scripts  and the code spans roughly 3K lines of code. It performs the following functions:
 
-1. Communication - Allows a central server to open parallel TCP connection to all end points through specific ports
+1. Communication - Allows the C&C to open parallel SSH connections to all end points for push-based approach
 2. Configuration - Allows for obtaining the current configuration settings (network, wireless and boot settings) as well as  pushing the new configuration settings and even issuing remote command simultaneously to all end points
 3. Data Collection - Extensive collection, aggregation and logging of end point data into a central repository
 4. Breach Containment - Remotely terminating malicious processes, or the complete end point device
